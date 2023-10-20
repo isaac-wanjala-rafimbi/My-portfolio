@@ -1,0 +1,54 @@
+body{
+    background-color: #91add4;
+    color: black;
+    
+}
+#navI{
+    padding: 30px;
+}
+#modify{
+    gap: 50px;
+    color: black;
+}
+.nav-link{
+    color: black;
+}
+
+#mboto{
+    border-radius: 50% 50%;
+}
+#attribute{
+    padding-top: 15%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+.icon-container {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+.icon {
+    display: flex;
+    font-size: 3.5rem; /* Adjust the size as needed */
+}
+#frontend{
+    padding: 20px;
+}
+#backend{
+    padding: 20px;
+}
+#section2{
+    padding: 20px;
+}
+h1{
+    font-family: sans-serif;
+}
+
+#testimonial{
+    text-align: center;
+}
+.test{
+    border-radius: 50% 50%;
+}
