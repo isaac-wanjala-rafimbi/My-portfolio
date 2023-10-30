@@ -1,34 +1,39 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    
 }
 
 body{
-    background-color:#07111f;
-    color: white;
+    background-color:#233f66;
+    color: #d0d4da;
     width: 100%;
-    padding: 0; /* Add some vertical padding to make it look better */
+    padding: 0; 
     margin: 0;
 }
+li{
+    list-style: none;
+}
+
 #navI{
-    padding: 30px;
+    padding: 10px;
 }
 #modify{
     font-size: larger;
     font-family: Nunito Sans;
-    color: white;
+    color: #d0d4da;
+    padding-top: 15px;
     
 }
 .nav-link{
-    color: white;
+    color: #d0d4da;
+    font-size: x-large;
     justify-content: space-between;
     padding-inline: 20%;
     margin-right: 30px;
+    transition: 0.7s ease;
 }
-.nav-link :hover{
-    color: black;
-}
-
 #mboto{
     border-radius: 50% 50%;
 }
@@ -37,6 +42,10 @@ body{
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
+   
+}
+#attribute button{
+    text-align: center;
 }
 .icon-container {
     text-align: center;
@@ -93,7 +102,7 @@ h1 {
     height: 100%;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    background:#d3e1f5;
+    background:#4c6281;
     transform-style: preserve-3d;
     transition: 0.5s;
     backface-visibility: hidden;
@@ -135,7 +144,7 @@ h1 {
 }
 .card .box.back {
     position: absolute;
-    background:#dfe7f3;
+    background: #4c6281;
     transform: rotateY(180deg);
     padding: 20px 30px;
     text-align: center;
@@ -158,45 +167,183 @@ h1 {
         margin-top: 40px;
         margin-bottom: 20px;
     }
+    
 }
 #experience{
     padding-bottom: 20px;
 }
 .each {
     
-    background-color: #d3e1f5;
+    background-color:#4c6281;
+   
     
-    color: #262626;
-    width: 100%;
-    height: 200px;
-   border-radius: 15px;
-   margin-top: 20px;
+    color: #f1f5fa;
+    &:hover {
+        transition: all 0.2s ease-out;
+        box-shadow: black;
+        top: -4px;
+        
+      }
+      
+      &:before {
+        transition: transform 0.15s ease-out;
+      }
+      
+      &:hover:before {
+        transform: scale(2.15);
+      }
+  
 }
-p{
-    text-align: center;
+section{
+    min-height: 100%;
 }
-footer{
-     bottom: 0;
-    
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 500px;
-    background-color: #1b2a3f;
-}
-#foot{
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+
+
 
 .items{
     text-align: center;
 }
-.social{
-    margin-top: 100px;
-    padding: 10px;
+.tems{
+    text-align: left;
+    margin-left: 10px;
+}
+.tems a{
+    text-decoration: none;
+}
+
+/*
+.quicklinks{
+    display: flex-column;
+    padding: 2px;
+    color: #94A3B8;
+}
+.quicklinks a{
+    color: #94A3B8;
+}*/
+
+/*hamburger */
+.nav-link:hover{
+color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+@media(max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #233f66;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    
+    .nav-menu.active{
+        left: 0;
+    }
+
+}
+.foot{
+    height: 500px;
+}
+footer {
+    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #152f52;
+    padding: 25px 0;
+    border-top-left-radius: 100px;
+}
+
+footer .footer-section1{
+    display: flex-column;
    
+    margin: 20px;
+    font-size: 1.2rem;
 }
-.social a{
-    padding-right: 10px;
+
+footer .footer-section1 .social a{
+    margin: 5px;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    text-align: center;
+    
+    font-size: 1.3rem;
+     border-radius: 5px;
+    transition: all .3s;
 }
+footer .footer-section1 .social a:hover{
+    
+    color: white;
+    transition: all .3s;
+}
+footer .footer-section1 .quicklinks{
+    margin: 0;
+    padding: 0;
+}
+footer .footer-section1 .quicklinks p a{
+    font-size: 1.2rem;
+     color: azure;
+    transition: all .3s;
+    text-decoration: none;
+}
+footer .footer-section1 .quicklinks p a:hover{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(75, 75, 146);
+    margin-left: 15px;
+    transition: all .3s;    
+
+}
+
+footer .attribute{
+   margin: 10px;
+}
+footer .button{
+    border-radius: 10px;
+    width: 50;
+    height: 15;
+}
+
+#attribute .download{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    
+    padding-bottom: 7px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
